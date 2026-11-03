@@ -1,0 +1,378 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Someone Special ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --wine: #7d243b;
+  --gold: #d9b779;
+  --cream: #f6e9dc;
+  --dark: #100b0d;
+}
+
+body {
+  background:
+    radial-gradient(ellipse at 50% 20%, #48202c 0%, transparent 55%),
+    linear-gradient(145deg, #100b0d, #1d1016, #090709);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -30px;
+  color: #c65b76;
+  opacity: .45;
+  animation: floatUp linear infinite;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 8%;
+  position: relative;
+  z-index: 2;
+}
+
+.logo {
+  color: var(--gold);
+  letter-spacing: 5px;
+  font-size: 12px;
+}
+
+.nav-date {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #b9a6a3;
+}
+
+main {
+  min-height: 83vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px 70px;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  animation: appear 1.5s ease;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.rose {
+  font-size: 48px;
+  margin-bottom: 24px;
+  filter: drop-shadow(0 0 20px #b74c69);
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  50% { transform: rotate(9deg) scale(1.08); }
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 6px;
+  color: var(--gold);
+  margin-bottom: 24px;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 8vw, 76px);
+  line-height: 1.15;
+  font-weight: 500;
+}
+
+h1 em {
+  color: var(--gold);
+  font-weight: 500;
+}
+
+.subtitle {
+  color: #c5b4b1;
+  font-size: 14px;
+  line-height: 2;
+  margin: 24px auto 35px;
+  max-width: 430px;
+}
+
+.line {
+  width: 65px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 30px;
+}
+
+button {
+  border: 1px solid var(--gold);
+  padding: 15px 30px;
+  background: linear-gradient(120deg, #8a3047, #57202f);
+  color: white;
+  font-family: inherit;
+  letter-spacing: 2px;
+  font-size: 11px;
+  cursor: pointer;
+  transition: .35s;
+  border-radius: 2px;
+}
+
+button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px #a43e584d;
+  background: #a33e57;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--gold);
+  margin-left: 10px;
+}
+
+.letter {
+  display: none;
+  margin: 40px auto 0;
+  padding: 35px 30px;
+  max-width: 520px;
+  background: linear-gradient(145deg, #ffffff0c, #ffffff03);
+  border: 1px solid #d9b77950;
+  backdrop-filter: blur(15px);
+  animation: appear .8s ease;
+}
+
+.letter h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  color: var(--gold);
+  margin-bottom: 20px;
+}
+
+.letter p {
+  font-size: 14px;
+  line-height: 2.1;
+  color: #dfceca;
+}
+
+.signature {
+  margin-top: 25px;
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 20px;
+}
+
+.question {
+  display: none;
+  margin-top: 35px;
+  animation: appear .8s ease;
+}
+
+.question h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.yes {
+  background: var(--wine);
+}
+
+.no {
+  background: transparent;
+}
+
+#answer {
+  margin-top: 25px;
+  font-family: 'Playfair Display', serif;
+  font-size: 23px;
+  color: var(--gold);
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 20px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: #8c7779;
+}
+
+@media(max-width: 500px) {
+  nav { padding: 22px 6%; }
+  .nav-date { font-size: 9px; }
+  .letter { padding: 28px 20px; }
+  .secondary { margin: 12px 0 0; }
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<nav>
+  <div class="logo">ÉTERNEL</div>
+  <div class="nav-date">FEBRUARY 14 · VALENTINE'S DAY</div>
+</nav>
+
+<main>
+<div class="container">
+
+  <div class="rose">🌹</div>
+
+  <div class="eyebrow">A LITTLE SOMETHING FOR YOU</div>
+
+  <h1>To Someone<br><em>Special.</em></h1>
+
+  <p class="subtitle">
+    Some people make ordinary days feel extraordinary.
+    And somehow, you became one of those people.
+  </p>
+
+  <div class="line"></div>
+
+  <button onclick="openLetter()">
+    OPEN MY LETTER &nbsp; ♡
+  </button>
+
+  <button class="secondary" onclick="showQuestion()">
+    ONE QUESTION
+  </button>
+
+  <div class="letter" id="letter">
+    <h2>Dear You,</h2>
+
+    <p>
+      I don't really know how to put everything into words,
+      but I just want you to know that you are someone
+      I genuinely admire.
+      <br><br>
+      Your smile, your presence, and even the little things
+      you do can make my day better without you knowing.
+      <br><br>
+      I don't expect anything from this.
+      I just wanted to be honest about how special
+      you are to me.
+      <br><br>
+      Maybe this is a simple message,
+      but it comes from a sincere heart.
+    </p>
+
+    <div class="signature">
+      With admiration, ♡
+    </div>
+  </div>
+
+  <div class="question" id="question">
+    <h2>Will you be my Valentine?</h2>
+
+    <button class="yes" onclick="sayYes()">
+      YES, OF COURSE ♡
+    </button>
+
+    <button class="no" id="noBtn" onclick="sayNo()">
+      MAYBE?
+    </button>
+
+    <div id="answer"></div>
+  </div>
+
+</div>
+</main>
+
+<footer>
+  MADE WITH LOVE · FEBRUARY 14
+</footer>
+
+<script>
+function openLetter() {
+  const letter = document.getElementById('letter');
+  letter.style.display = 'block';
+  letter.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+function showQuestion() {
+  const question = document.getElementById('question');
+  question.style.display = 'block';
+  question.scrollIntoView({behavior:'smooth', block:'center'});
+}
+
+function sayYes() {
+  document.getElementById('answer').innerHTML =
+    "You just made my day. ❤️";
+  burstHearts();
+}
+
+function sayNo() {
+  document.getElementById('answer').innerHTML =
+    "That's okay. I'll still wish you happiness. ♡";
+}
+
+function burstHearts() {
+  for(let i = 0; i < 25; i++) {
+    createHeart(true);
+  }
+}
+
+function createHeart(burst = false) {
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  heart.innerHTML = ['♥','♡','✧','❤'][Math.floor(Math.random()*4)];
+
+  heart.style.left = Math.random()*100 + 'vw';
+  heart.style.fontSize = (12 + Math.random()*20) + 'px';
+  heart.style.animationDuration = (burst ? 2 : 5 + Math.random()*8) + 's';
+
+  if(burst) {
+    heart.style.bottom = Math.random()*40 + 'vh';
+  }
+
+  document.getElementById('particles').appendChild(heart);
+  setTimeout(() => heart.remove(), 12000);
+}
+
+setInterval(() => createHeart(), 700);
+</script>
+
+</body>
+</html>
